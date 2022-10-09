@@ -1,8 +1,8 @@
-import { useTypedSelector } from '../hooks/useTypedSelector';
+import { useTypedSelector } from '../app/hooks';
 
 export const App = () => {
 
-    const state = useTypedSelector(state => state);
+    const state = useTypedSelector(state => state.repositories);
     console.log(state);
 
     return <div>
