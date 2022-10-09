@@ -1,4 +1,5 @@
 import { useTypedSelector } from '../app/hooks';
+import { RepositoriesList } from '../features/repositories/RepositoriesList';
 
 export const App = () => {
 
@@ -6,6 +7,6 @@ export const App = () => {
     console.log(state);
 
     return <div>
-            <h1>Search for a NPM package.</h1>
+            <RepositoriesList />
         </div>
 };
