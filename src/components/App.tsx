@@ -1,13 +1,11 @@
-import { Provider } from 'react-redux';
-import { store } from '../redux';
-
-import { RepositoriesList } from './RepositoriesList';
+import { useTypedSelector } from '../hooks/useTypedSelector';
 
 export const App = () => {
-    return (<Provider store={store}>
-        <div>
+
+    const state = useTypedSelector(state => state);
+    console.log(state);
+
+    return <div>
             <h1>Search for a NPM package.</h1>
-            <RepositoriesList />
         </div>
-    </Provider>)
 };
